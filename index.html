@@ -121,6 +121,88 @@
             width: 100%;
         }
         
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-toggle::after {
+            content: '▼';
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+        
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--primary-color);
+            min-width: 280px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-hover);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            z-index: 1001;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid var(--primary-color);
+        }
+        
+        .dropdown-menu li {
+            list-style: none;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+        
+        .dropdown-menu a::after {
+            display: none;
+        }
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -892,6 +974,35 @@
                 display: block;
             }
             
+            .dropdown-menu {
+                position: static;
+                background: transparent;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                padding: 0;
+                margin: 0;
+                min-width: auto;
+            }
+            
+            .dropdown-menu::before {
+                display: none;
+            }
+            
+            .dropdown-menu a {
+                padding: 0.5rem 1rem;
+                border-bottom: none;
+                color: var(--text-light);
+                opacity: 0.8;
+            }
+            
+            .dropdown-menu a:hover {
+                background: transparent;
+                color: var(--accent-color);
+                transform: none;
+            }
+            
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -970,7 +1081,20 @@
             <nav class="nav">
                 <div class="nav-brand">Dr. Rajan Nagarajan</div>
                                         <ul class="nav-links">
-                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li class="dropdown">
+                                <a href="#portfolio" class="dropdown-toggle">Portfolio</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="portfolio/prds.html">📋 PRDs</a></li>
+                                    <li><a href="portfolio/libraries.html">💻 Open Source Libraries</a></li>
+                                    <li><a href="portfolio/patents.html">🔬 Patents</a></li>
+                                    <li><a href="portfolio/contributions.html">🤝 Open Source Contributions</a></li>
+                                    <li><a href="portfolio/websites.html">🌐 Websites & Applications</a></li>
+                                    <li><a href="portfolio/publications.html">📚 Publications</a></li>
+                                    <li><a href="portfolio/certifications.html">🏆 Certifications</a></li>
+                                    <li><a href="portfolio/books.html">📖 Books</a></li>
+                                    <li><a href="portfolio/medium.html">📝 Medium Articles</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#leadership">Leadership</a></li>
                             <li><a href="#expertise">Expertise</a></li>
                             <li><a href="#thought-leadership">Thought Leadership</a></li>
@@ -1054,7 +1178,21 @@
                     <span class="portfolio-icon">💻</span>
                     <h3>Open Source Libraries</h3>
                     <p>RNasDEV, Local RAG Application, SQL Query Builder with multi-table mapping. Demonstrating technical leadership and innovation.</p>
-                    <a href="portfolio/projects.html" class="btn">View Projects</a>
+                    <a href="portfolio/libraries.html" class="btn">View Libraries</a>
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">🔬</span>
+                    <h3>Patents</h3>
+                    <p>Local Edge Behavior Monitoring AI, Secure Transfer of Credentials patents demonstrating innovative security and AI solutions.</p>
+                    <a href="portfolio/patents.html" class="btn">View Patents</a>
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">🤝</span>
+                    <h3>Open Source Contributions</h3>
+                    <p>Contributions to various open source projects, code reviews, and community involvement showcasing collaborative development.</p>
+                    <a href="portfolio/contributions.html" class="btn">View Contributions</a>
                 </div>
                 
                 <div class="portfolio-card">
@@ -1066,23 +1204,30 @@
                 
                 <div class="portfolio-card">
                     <span class="portfolio-icon">📚</span>
-                    <h3>Publications & Research</h3>
+                    <h3>Publications</h3>
                     <p>Academic papers, thesis work, and industry publications demonstrating thought leadership and research expertise.</p>
                     <a href="portfolio/publications.html" class="btn">View Publications</a>
                 </div>
                 
                 <div class="portfolio-card">
                     <span class="portfolio-icon">🏆</span>
-                    <h3>Patents & Certifications</h3>
-                    <p>Local Edge Behavior Monitoring AI, Secure Transfer of Credentials patents. AI and industry certifications.</p>
-                    <a href="portfolio/credentials.html" class="btn">View Credentials</a>
+                    <h3>Certifications</h3>
+                    <p>AI, cybersecurity, and industry certifications demonstrating continuous learning and professional development.</p>
+                    <a href="portfolio/certifications.html" class="btn">View Certifications</a>
                 </div>
                 
                 <div class="portfolio-card">
                     <span class="portfolio-icon">📖</span>
-                    <h3>Books & Thought Leadership</h3>
-                    <p>Published books including "The Invisible Engine" and Medium articles on AI leadership and organizational psychology.</p>
+                    <h3>Books</h3>
+                    <p>Published books including "The Invisible Engine" and other thought leadership publications on organizational psychology.</p>
                     <a href="portfolio/books.html" class="btn">View Books</a>
+                </div>
+                
+                <div class="portfolio-card">
+                    <span class="portfolio-icon">📝</span>
+                    <h3>Medium Articles</h3>
+                    <p>Regular industry articles on AI leadership, product management, and behavioral psychology published on Medium platform.</p>
+                    <a href="portfolio/medium.html" class="btn">View Articles</a>
                 </div>
             </div>
         </div>
@@ -1384,15 +1529,18 @@
                     <p style="color: #ccc; margin-bottom: 1rem;">VP-Level AI Product Executive | Finance & Security Leader</p>
                     <p style="color: #ccc;">Transforming regulated industries through AI innovation while building world-class product teams</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Portfolio</h3>
-                    <a href="portfolio/prds.html">Product Requirements</a>
-                    <a href="portfolio/projects.html">Open Source Projects</a>
-                    <a href="portfolio/websites.html">Websites</a>
-                    <a href="portfolio/publications.html">Publications</a>
-                    <a href="portfolio/credentials.html">Credentials</a>
-                    <a href="portfolio/books.html">Books</a>
-                </div>
+                                        <div class="footer-section">
+                            <h3>Portfolio</h3>
+                            <a href="portfolio/prds.html">📋 PRDs</a>
+                            <a href="portfolio/libraries.html">💻 Open Source Libraries</a>
+                            <a href="portfolio/patents.html">🔬 Patents</a>
+                            <a href="portfolio/contributions.html">🤝 Open Source Contributions</a>
+                            <a href="portfolio/websites.html">🌐 Websites & Applications</a>
+                            <a href="portfolio/publications.html">📚 Publications</a>
+                            <a href="portfolio/certifications.html">🏆 Certifications</a>
+                            <a href="portfolio/books.html">📖 Books</a>
+                            <a href="portfolio/medium.html">📝 Medium Articles</a>
+                        </div>
                 <div class="footer-section">
                     <h3>Connect</h3>
                     <a href="https://linkedin.com/in/nrajananalyst" target="_blank" rel="noopener">LinkedIn</a>

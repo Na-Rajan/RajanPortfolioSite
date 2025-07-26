@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Libraries - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="RNasDEV, Local RAG Application, SQL Query Builder and other open source libraries demonstrating technical leadership and innovation.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Projects Grid */
+        .projects-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--teal-color), var(--accent-color));
+            color: var(--text-light);
+            padding: 2rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .project-features li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-tag {
+            background: var(--bg-light);
+            color: var(--text-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Open Source Libraries</h1>
+            <p>Technical leadership demonstrated through innovative open source libraries and contributions. From AI-powered applications to developer tools, showcasing full-stack expertise and community impact.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Libraries</h2>
+            <div class="projects-grid">
+                <!-- RNasDEV -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">RNasDEV</h3>
+                        <p class="project-subtitle">React Native Development Framework</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            A comprehensive React Native development framework that accelerates mobile app development with pre-built components, state management, and deployment automation.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <ul class="project-features">
+                            <li>Pre-built UI components and navigation</li>
+                            <li>State management with Redux Toolkit</li>
+                            <li>Automated testing and CI/CD pipeline</li>
+                            <li>Performance optimization tools</li>
+                            <li>Cross-platform compatibility</li>
+                            <li>Developer documentation and examples</li>
+                        </ul>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">500+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Stars</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">15</div>
+                                <div class="stat-label">Contributors</div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/na-rajan/rnasdev" class="btn btn-primary">View on GitHub</a>
+                            <a href="#" class="btn btn-secondary">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local RAG Application -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Local RAG Application</h3>
+                        <p class="project-subtitle">Retrieval-Augmented Generation System</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            A local deployment of Retrieval-Augmented Generation (RAG) system that enables document-based question answering without cloud dependencies.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <ul class="project-features">
+                            <li>Local document processing and indexing</li>
+                            <li>Vector database integration</li>
+                            <li>Custom embedding models</li>
+                            <li>RESTful API interface</li>
+                            <li>Web-based chat interface</li>
+                            <li>Privacy-focused local deployment</li>
+                        </ul>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">1K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100+</div>
+                                <div class="stat-label">Stars</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">25</div>
+                                <div class="stat-label">Forks</div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/na-rajan/local-rag" class="btn btn-primary">View on GitHub</a>
+                            <a href="#" class="btn btn-secondary">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Query Builder -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">SQL Query Builder</h3>
+                        <p class="project-subtitle">Multi-Table Mapping System</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            An intelligent SQL query builder with automatic multi-table mapping, relationship detection, and query optimization for complex database operations.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <ul class="project-features">
+                            <li>Automatic table relationship detection</li>
+                            <li>Query optimization and performance tuning</li>
+                            <li>Visual query builder interface</li>
+                            <li>Multiple database support</li>
+                            <li>Query validation and error handling</li>
+                            <li>Export to various formats</li>
+                        </ul>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">2K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">75+</div>
+                                <div class="stat-label">Stars</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">30</div>
+                                <div class="stat-label">Forks</div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/na-rajan/sql-query-builder" class="btn btn-primary">View on GitHub</a>
+                            <a href="#" class="btn btn-secondary">Try Online</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-Powered Analytics Dashboard -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AI Analytics Dashboard</h3>
+                        <p class="project-subtitle">Real-time Business Intelligence</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            A real-time analytics dashboard powered by AI that provides business intelligence, predictive analytics, and automated insights for data-driven decision making.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                        <ul class="project-features">
+                            <li>Real-time data visualization</li>
+                            <li>Predictive analytics models</li>
+                            <li>Automated insight generation</li>
+                            <li>Custom dashboard builder</li>
+                            <li>Data source integration</li>
+                            <li>Export and sharing capabilities</li>
+                        </ul>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-value">3K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">120+</div>
+                                <div class="stat-label">Stars</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">45</div>
+                                <div class="stat-label">Forks</div>
+                            </div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/na-rajan/ai-analytics" class="btn btn-primary">View on GitHub</a>
+                            <a href="#" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dr. Rajan Nagarajan. All rights reserved. | <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Local Edge Behavior Monitoring AI, Secure Transfer of Credentials patents. AI and industry certifications demonstrating technical expertise.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Credentials Sections */
+        .credentials-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .credential-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .credential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .credential-header {
+            background: linear-gradient(135deg, var(--teal-color), var(--accent-color));
+            color: var(--text-light);
+            padding: 2rem;
+        }
+        
+        .credential-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .credential-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .credential-content {
+            padding: 2rem;
+        }
+        
+        .credential-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .credential-details {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .credential-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .credential-details li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .credential-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+        
+        .credential-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .credential-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .credential-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Certifications</h1>
+            <p>Innovation patents and professional certifications demonstrating technical expertise, leadership capabilities, and commitment to continuous learning in AI and technology domains.</p>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="credentials-section">
+        <div class="container">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="credentials-grid">
+                <!-- Patents -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">Local Edge Behavior Monitoring AI</h3>
+                        <p class="credential-subtitle">Patent | Cybersecurity Innovation | 2023</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Revolutionary AI system for monitoring and analyzing local edge device behavior to detect security threats and anomalies in real-time, enhancing cybersecurity posture.
+                        </p>
+                        <ul class="credential-details">
+                            <li>Real-time threat detection</li>
+                            <li>Behavioral analysis algorithms</li>
+                            <li>Edge computing optimization</li>
+                            <li>Machine learning integration</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">99.5%</div>
+                                <div class="stat-label">Detection Rate</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Monitoring</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Patent</a>
+                            <a href="#" class="btn btn-secondary">Technical Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secure Transfer of Credentials -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">Secure Transfer of Credentials</h3>
+                        <p class="credential-subtitle">Patent | Identity Management | 2023</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Advanced system for secure credential transfer and management using blockchain technology and zero-knowledge proofs, ensuring privacy and security in digital identity systems.
+                        </p>
+                        <ul class="credential-details">
+                            <li>Blockchain-based security</li>
+                            <li>Zero-knowledge proofs</li>
+                            <li>Multi-factor authentication</li>
+                            <li>Compliance with regulations</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Security</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Use Cases</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Patent</a>
+                            <a href="#" class="btn btn-secondary">Implementation Guide</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Certifications -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">AI & Machine Learning Certifications</h3>
+                        <p class="credential-subtitle">Professional Certifications | 2022-2024</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Comprehensive AI and machine learning certifications from leading institutions, demonstrating expertise in cutting-edge technologies and methodologies.
+                        </p>
+                        <ul class="credential-details">
+                            <li>Google TensorFlow Developer</li>
+                            <li>Microsoft Azure AI Engineer</li>
+                            <li>AWS Machine Learning Specialty</li>
+                            <li>IBM AI Engineering Professional</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Average Score</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Certificates</a>
+                            <a href="#" class="btn btn-secondary">Skills Matrix</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Certifications -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">Cybersecurity & Security Certifications</h3>
+                        <p class="credential-subtitle">Security Professional | 2021-2024</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Industry-recognized cybersecurity certifications demonstrating expertise in security architecture, threat detection, and risk management for enterprise environments.
+                        </p>
+                        <ul class="credential-details">
+                            <li>Certified Information Systems Security Professional (CISSP)</li>
+                            <li>Certified Ethical Hacker (CEH)</li>
+                            <li>CompTIA Security+</li>
+                            <li>GIAC Security Essentials (GSEC)</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">5+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Certificates</a>
+                            <a href="#" class="btn btn-secondary">Security Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Management Certifications -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">Product Management & Leadership</h3>
+                        <p class="credential-subtitle">Professional Development | 2020-2024</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Advanced product management and leadership certifications from top institutions, demonstrating strategic thinking and executive leadership capabilities.
+                        </p>
+                        <ul class="credential-details">
+                            <li>Certified Scrum Product Owner (CSPO)</li>
+                            <li>SAFe Product Owner/Product Manager</li>
+                            <li>Google Project Management Professional</li>
+                            <li>Leadership in Product Management</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">10+</div>
+                                <div class="stat-label">Years Leadership</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Certificates</a>
+                            <a href="#" class="btn btn-secondary">Leadership Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Credentials -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <h3 class="credential-title">Academic Credentials</h3>
+                        <p class="credential-subtitle">5 Degrees + PhD | 2010-2023</p>
+                    </div>
+                    <div class="credential-content">
+                        <p class="credential-description">
+                            Comprehensive academic background with 5 relevant degrees including a PhD, demonstrating deep expertise in management psychology, technology, and business analytics.
+                        </p>
+                        <ul class="credential-details">
+                            <li>PhD in Management Psychology (IIM Bangalore)</li>
+                            <li>M.Sc. Counselling Psychology</li>
+                            <li>MBA Business Analytics</li>
+                            <li>B.Tech Computer Science</li>
+                            <li>B.Sc. Mathematics</li>
+                        </ul>
+                        <div class="credential-stats">
+                            <div class="stat">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Degrees</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Average GPA</div>
+                            </div>
+                        </div>
+                        <div class="credential-actions">
+                            <a href="#" class="btn btn-primary">View Transcripts</a>
+                            <a href="#" class="btn btn-secondary">Academic Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dr. Rajan Nagarajan. All rights reserved. | <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

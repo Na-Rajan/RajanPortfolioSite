@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Contributions - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Contributions to various open source projects, code reviews, and community involvement showcasing collaborative development.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contributions-section {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .contributions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contribution-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .contribution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contribution-header {
+            background: linear-gradient(135deg, var(--teal-color) 0%, var(--accent-color) 100%);
+            color: var(--text-light);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .contribution-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contribution-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contribution-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .contribution-content {
+            padding: 2rem;
+        }
+        
+        .contribution-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .contribution-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin-top: 0.3rem;
+        }
+        
+        .contribution-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contributions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contribution-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contribution-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Open Source Contributions</h1>
+            <p>Contributions to various open source projects, code reviews, and community involvement showcasing collaborative development and technical leadership.</p>
+        </div>
+    </section>
+
+    <section class="contributions-section">
+        <div class="container">
+            <h2 class="section-title">Community Contributions</h2>
+            <div class="contributions-grid">
+                <div class="contribution-card">
+                    <div class="contribution-header">
+                        <div class="contribution-icon">🐍</div>
+                        <h3 class="contribution-title">Python Community</h3>
+                        <p class="contribution-subtitle">Core Contributor</p>
+                    </div>
+                    <div class="contribution-content">
+                        <p class="contribution-description">
+                            Active contributor to Python ecosystem projects including FastAPI, Pydantic, and various data science libraries. Focus on performance optimization and security enhancements.
+                        </p>
+                        <div class="contribution-stats">
+                            <div class="stat">
+                                <span class="stat-value">50+</span>
+                                <div class="stat-label">PRs Merged</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">2K+</span>
+                                <div class="stat-label">Stars</div>
+                            </div>
+                        </div>
+                        <div class="contribution-actions">
+                            <a href="https://github.com/na-rajan" target="_blank" class="btn btn-primary">View Profile</a>
+                            <a href="#" class="btn btn-secondary">Contributions</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contribution-card">
+                    <div class="contribution-header">
+                        <div class="contribution-icon">🔒</div>
+                        <h3 class="contribution-title">Security Projects</h3>
+                        <p class="contribution-subtitle">Security Expert</p>
+                    </div>
+                    <div class="contribution-content">
+                        <p class="contribution-description">
+                            Contributions to cybersecurity open source projects including OWASP tools, security testing frameworks, and threat intelligence platforms.
+                        </p>
+                        <div class="contribution-stats">
+                            <div class="stat">
+                                <span class="stat-value">25+</span>
+                                <div class="stat-label">Security PRs</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8</span>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">500+</span>
+                                <div class="stat-label">Reviews</div>
+                            </div>
+                        </div>
+                        <div class="contribution-actions">
+                            <a href="https://github.com/na-rajan" target="_blank" class="btn btn-primary">View Profile</a>
+                            <a href="#" class="btn btn-secondary">Security Work</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contribution-card">
+                    <div class="contribution-header">
+                        <div class="contribution-icon">🤖</div>
+                        <h3 class="contribution-title">AI/ML Libraries</h3>
+                        <p class="contribution-subtitle">AI Researcher</p>
+                    </div>
+                    <div class="contribution-content">
+                        <p class="contribution-description">
+                            Contributions to machine learning and AI libraries including TensorFlow, PyTorch, and specialized NLP and computer vision tools.
+                        </p>
+                        <div class="contribution-stats">
+                            <div class="stat">
+                                <span class="stat-value">30+</span>
+                                <div class="stat-label">AI PRs</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">12</span>
+                                <div class="stat-label">Libraries</div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1.5K+</span>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                        </div>
+                        <div class="contribution-actions">
+                            <a href="https://github.com/na-rajan" target="_blank" class="btn btn-primary">View Profile</a>
+                            <a href="#" class="btn btn-secondary">AI Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
