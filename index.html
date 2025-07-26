@@ -3,35 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Rajan Nagarajan - AI Product Director</title>
-    <meta name="description" content="AI Product Director | Scaling Teams to $100M+ Impact | Finance & Security Leader">
+    <title>Dr. Rajan Nagarajan - AI Product Director & Finance Leader</title>
+    <meta name="description" content="AI Product Director with 10+ years experience scaling teams to $100M+ impact. Expert in Finance, Security, and AI innovation.">
+    <meta name="keywords" content="AI Product Director, Finance, Security, Product Management, Leadership">
+    <meta name="author" content="Dr. Rajan Nagarajan">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Rajan Nagarajan - AI Product Director">
+    <meta property="og:description" content="AI Product Director | Scaling Teams to $100M+ Impact | Finance & Security Leader">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://na-rajan.github.io/RajanPortfolioSite/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         /* Header */
         .header {
-            background: linear-gradient(135deg, #1B2951 0%, #2A3F7A 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
             padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: var(--shadow);
         }
         
         .nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,36 +83,66 @@
         
         .nav-brand {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #F59E0B;
+            font-weight: 700;
+            color: var(--accent-color);
         }
         
         .nav-links {
             display: flex;
             gap: 2rem;
+            list-style: none;
         }
         
         .nav-links a {
-            color: white;
+            color: var(--text-light);
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
         }
         
         .nav-links a:hover {
-            color: #F59E0B;
+            color: var(--accent-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1B2951 0%, #2A3F7A 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
             padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
         }
         
         .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
@@ -76,58 +150,69 @@
         }
         
         .hero-text h1 {
-            font-size: 3rem;
+            color: var(--accent-color);
             margin-bottom: 1rem;
-            color: #F59E0B;
+            animation: fadeInUp 1s ease;
         }
         
         .hero-text h2 {
-            font-size: 1.5rem;
             margin-bottom: 1rem;
             opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
         }
         
         .hero-text p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.8;
+            animation: fadeInUp 1s ease 0.4s both;
         }
         
         .hero-buttons {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
         }
         
         .btn {
+            display: inline-block;
             padding: 12px 24px;
-            border-radius: 6px;
+            border-radius: var(--border-radius);
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
         .btn-primary {
-            background: #F59E0B;
-            color: white;
+            background: var(--accent-color);
+            color: var(--text-light);
         }
         
         .btn-primary:hover {
             background: #E59000;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
         }
         
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: var(--text-light);
+            border-color: var(--text-light);
         }
         
         .btn-secondary:hover {
-            background: white;
-            color: #1B2951;
+            background: var(--text-light);
+            color: var(--primary-color);
+            transform: translateY(-2px);
         }
         
         .hero-image {
             text-align: center;
+            animation: fadeInRight 1s ease 0.8s both;
         }
         
         .profile-img {
@@ -135,16 +220,23 @@
             height: 300px;
             border-radius: 50%;
             border: 4px solid rgba(255,255,255,0.2);
-            background: #F59E0B;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #E59000 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            color: white;
+            color: var(--text-light);
             margin: 0 auto;
+            box-shadow: var(--shadow-hover);
+            transition: var(--transition);
         }
         
-        /* Metrics */
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Metrics Section */
         .metrics {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -153,9 +245,6 @@
         }
         
         .metrics-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
@@ -164,47 +253,57 @@
         
         .metric {
             background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .metric:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
         }
         
         .metric-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #F59E0B;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
         }
         
         .metric-label {
             font-size: 0.9rem;
             opacity: 0.8;
+            margin-top: 0.5rem;
         }
         
         /* Sections */
         .section {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
         
-        .section-white {
-            background: white;
-        }
-        
-        .section-gray {
-            background: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        .section-white { background: var(--text-light); }
+        .section-gray { background: var(--bg-light); }
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #1B2951;
+            color: var(--primary-color);
+            position: relative;
         }
         
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        /* Cards */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -212,40 +311,40 @@
         }
         
         .card {
-            background: white;
+            background: var(--text-light);
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
         }
         
         .card-icon {
-            font-size: 2rem;
-            color: #0D9488;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            display: block;
         }
         
         .card h3 {
-            font-size: 1.5rem;
+            color: var(--primary-color);
             margin-bottom: 1rem;
-            color: #1B2951;
         }
         
         .card p {
-            color: #666;
+            color: var(--text-gray);
             line-height: 1.6;
         }
         
         /* Contact Section */
         .contact {
-            background: #1B2951;
-            color: white;
-            padding: 4rem 0;
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 5rem 0;
         }
         
         .contact-grid {
@@ -258,19 +357,31 @@
         .contact-info {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
         
         .contact-icon {
-            color: #F59E0B;
+            color: var(--accent-color);
             margin-right: 1rem;
-            width: 20px;
+            font-size: 1.2rem;
+            width: 24px;
+        }
+        
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent-color);
         }
         
         /* Footer */
         .footer {
-            background: #1B2951;
-            color: white;
+            background: var(--primary-color);
+            color: var(--text-light);
             padding: 3rem 0 1rem;
         }
         
@@ -282,7 +393,7 @@
         }
         
         .footer-section h3 {
-            color: #F59E0B;
+            color: var(--accent-color);
             margin-bottom: 1rem;
         }
         
@@ -291,10 +402,11 @@
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
+            transition: var(--transition);
         }
         
         .footer-section a:hover {
-            color: #F59E0B;
+            color: var(--accent-color);
         }
         
         .footer-bottom {
@@ -304,23 +416,109 @@
             color: #ccc;
         }
         
-        /* Responsive */
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2rem;
+                gap: 2rem;
             }
             
             .nav-links {
                 display: none;
             }
             
+            .mobile-menu-btn {
+                display: block;
+            }
+            
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .profile-img {
+                width: 250px;
+                height: 250px;
+                font-size: 3rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Performance Optimizations */
+        .card, .metric, .btn {
+            will-change: transform;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .header, .footer, .btn {
+                display: none;
+            }
+            
+            .hero {
+                background: white !important;
+                color: black !important;
             }
         }
     </style>
@@ -328,126 +526,156 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">Dr. Rajan Nagarajan</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#publications">Publications</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">Dr. Rajan Nagarajan</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Dr. Rajan Nagarajan</h1>
-                <h2>AI Product Director | Finance & Security Leader</h2>
-                <p>Transforming regulated industries through AI innovation while building world-class product teams</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                    <a href="#" class="btn btn-secondary">Download Resume</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Dr. Rajan Nagarajan</h1>
+                    <h2>AI Product Director | Finance & Security Leader</h2>
+                    <p>Transforming regulated industries through AI innovation while building world-class product teams. 10+ years of experience delivering data-driven solutions that automate decision-making and drive $100M+ revenue impact.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                        <a href="mailto:nrajananalyst@gmail.com" class="btn btn-secondary">Download Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img">RN</div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-img">RN</div>
-            </div>
-        </div>
-        
-        <!-- Metrics -->
-        <div class="metrics">
-            <div class="metrics-grid">
-                <div class="metric">
-                    <div class="metric-value">45+</div>
-                    <div class="metric-label">Team Members Led</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">$100M</div>
-                    <div class="metric-label">ARR Growth</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">12+</div>
-                    <div class="metric-label">Products Shipped</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">7</div>
-                    <div class="metric-label">AI Solutions</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">5K</div>
-                    <div class="metric-label">LinkedIn Following</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">Yes</div>
-                    <div class="metric-label">Published Author</div>
+            
+            <!-- Metrics -->
+            <div class="metrics">
+                <div class="container">
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <span class="metric-value">45+</span>
+                            <div class="metric-label">Team Members Led</div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">$100M</span>
+                            <div class="metric-label">ARR Growth</div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">12+</span>
+                            <div class="metric-label">Products Shipped</div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">7</span>
+                            <div class="metric-label">AI Solutions</div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">5K</span>
+                            <div class="metric-label">LinkedIn Following</div>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Yes</span>
+                            <div class="metric-label">Published Author</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Navigation Cards -->
+    <!-- About Section -->
     <section class="section section-white" id="about">
         <div class="container">
-            <h2 class="section-title">Explore My Profile</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="cards-grid">
                 <div class="card">
-                    <div class="card-icon">💼</div>
-                    <h3>About Me</h3>
-                    <p>Leadership impact and strategic expertise across Finance, Security, and AI domains.</p>
+                    <span class="card-icon">💼</span>
+                    <h3>Current Role</h3>
+                    <p><strong>AI Product Manager, Fidelity Investments (CRUX Team)</strong><br>
+                    Leading AI-driven product initiatives in the financial services sector.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">💻</div>
-                    <h3>Portfolio</h3>
-                    <p>PRDs, GitHub repositories, websites, patents, and publications.</p>
+                    <span class="card-icon">🎯</span>
+                    <h3>Expertise</h3>
+                    <p>Product strategy, stakeholder management, agile delivery, and building cross-functional AI teams across FinTech, EdTech, and Managed Security domains.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>Publications</h3>
-                    <p>Books authored and Medium articles on industry topics.</p>
+                    <span class="card-icon">🎓</span>
+                    <h3>Education</h3>
+                    <p><strong>Doctorate in Management Psychology</strong> (IIM Bangalore)<br>
+                    <strong>M.Sc. Counselling Psychology</strong><br>
+                    <strong>MBA Business Analytics</strong></p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">🎓</div>
-                    <h3>Credentials</h3>
-                    <p>Academic achievements, certifications, and education background.</p>
+                    <span class="card-icon">📚</span>
+                    <h3>Author</h3>
+                    <p><strong>"The Invisible Engine: How Systems, Not Willpower, Shape Who We Become"</strong><br>
+                    Published author sharing insights on organizational psychology and leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section section-gray" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio & Projects</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">💻</span>
+                    <h3>AI Solutions</h3>
+                    <p>7+ AI-powered products delivered, including automated decision-making systems and predictive analytics platforms.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">💡</div>
-                    <h3>Thought Leadership</h3>
-                    <p>Influencing the industry conversation through expertise and insights.</p>
+                    <span class="card-icon">📊</span>
+                    <h3>Product Strategy</h3>
+                    <p>Led product strategy for multiple high-impact initiatives resulting in $100M+ in annual recurring revenue.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">📧</div>
-                    <h3>Contact</h3>
-                    <p>Get in touch for consulting, speaking opportunities, or collaboration.</p>
+                    <span class="card-icon">👥</span>
+                    <h3>Team Leadership</h3>
+                    <p>Scaled cross-functional teams from 12 to 45+ members across engineering, design, and product departments.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🔒</span>
+                    <h3>Security & Compliance</h3>
+                    <p>Managed security products and ensured compliance in regulated financial and healthcare environments.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Leadership Impact -->
-    <section class="section section-gray">
+    <section class="section section-white">
         <div class="container">
             <h2 class="section-title">Building Teams, Delivering Results</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--text-gray); font-style: italic;">
                 "Leadership is about making others better as a result of your presence and ensuring that impact lasts in your absence."
             </p>
             <div class="cards-grid">
                 <div class="card">
-                    <h3 style="color: #F59E0B; font-size: 3rem;">45+</h3>
+                    <h3 style="color: var(--accent-color); font-size: 3rem; margin-bottom: 1rem;">45+</h3>
                     <h4>Team Members Led</h4>
-                    <p>Scaled team from 12 to 45+ members across multiple departments</p>
+                    <p>Successfully scaled team from 12 to 45+ members across multiple departments, fostering a culture of innovation and collaboration.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color: #F59E0B; font-size: 3rem;">$100M+</h3>
+                    <h3 style="color: var(--accent-color); font-size: 3rem; margin-bottom: 1rem;">$100M+</h3>
                     <h4>Revenue Impact</h4>
-                    <p>Directly contributed to over $100M in annual recurring revenue</p>
+                    <p>Directly contributed to over $100M in annual recurring revenue through strategic product initiatives and market expansion.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color: #F59E0B; font-size: 3rem;">12+</h3>
+                    <h3 style="color: var(--accent-color); font-size: 3rem; margin-bottom: 1rem;">12+</h3>
                     <h4>Products Shipped</h4>
-                    <p>Successfully delivered 12+ products including 7 AI solutions</p>
+                    <p>Successfully delivered 12+ products including 7 AI solutions, from concept to market launch and scale.</p>
                 </div>
             </div>
         </div>
@@ -464,7 +692,7 @@
                     </p>
                     <div class="contact-info">
                         <span class="contact-icon">📧</span>
-                        <span>nrajananalyst@gmail.com</span>
+                        <a href="mailto:nrajananalyst@gmail.com">nrajananalyst@gmail.com</a>
                     </div>
                     <div class="contact-info">
                         <span class="contact-icon">📞</span>
@@ -476,7 +704,7 @@
                     </div>
                     <div class="contact-info">
                         <span class="contact-icon">🔗</span>
-                        <a href="https://linkedin.com/in/nrajananalyst" style="color: white;">LinkedIn Profile</a>
+                        <a href="https://linkedin.com/in/nrajananalyst" target="_blank" rel="noopener">LinkedIn Profile</a>
                     </div>
                 </div>
                 <div style="text-align: center;">
@@ -506,9 +734,9 @@
                 </div>
                 <div class="footer-section">
                     <h3>Connect</h3>
-                    <a href="https://linkedin.com/in/nrajananalyst">LinkedIn</a>
-                    <a href="https://github.com/na-rajan">GitHub</a>
-                    <a href="https://medium.com">Medium</a>
+                    <a href="https://linkedin.com/in/nrajananalyst" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/na-rajan" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://twitter.com/nrajananalyst" target="_blank" rel="noopener">Twitter</a>
                     <a href="mailto:nrajananalyst@gmail.com">Email</a>
                 </div>
             </div>
@@ -517,5 +745,44 @@
             </div>
         </div>
     </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(27, 41, 81, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1B2951 0%, #2A3F7A 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
 </body>
 </html> 
