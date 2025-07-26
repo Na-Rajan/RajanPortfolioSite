@@ -1,30 +1,62 @@
-# Executive portfolio website
+# Dr Rajan Nagarajan — Personal Site
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Welcome to my personal website and online resume!
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/nrajananalyst-6640s-projects/v0-executive-portfolio-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/lYqJser3Kd6)
+## About This Site
 
-## Overview
+This site showcases my professional journey as an AI Product Manager, Management Psychologist, and Author. Here, you'll find details about my experience, education, skills, and selected projects across FinTech, EdTech, and Managed Security domains. The site is built with Next.js, TypeScript, and Tailwind CSS, featuring a modern design that is fully responsive.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## About Me
 
-## Deployment
+I'm an AI Product Manager with 10+ years of experience delivering data-driven solutions that automate decision-making, reduce operational friction, and increase revenue. My expertise spans product strategy, stakeholder management, agile delivery, and building cross-functional AI teams. I am passionate about leveraging technology to solve complex business problems and drive transformation.
 
-Your project is live at:
+### Current Role
+- **AI Product Manager, Fidelity Investments (CRUX Team)**
 
-**[https://vercel.com/nrajananalyst-6640s-projects/v0-executive-portfolio-website](https://vercel.com/nrajananalyst-6640s-projects/v0-executive-portfolio-website)**
+### Previous Experience
+- **Head of Product, Managed Security (Optimus)**
+- **Product Manager, EdTech**
 
-## Build your app
+### Education
+- **Doctorate in Management Psychology** (IIM Bangalore)
+- **M.Sc. Counselling Psychology**
+- **MBA Business Analytics**
 
-Continue building your app on:
+### Author
+- **"The Invisible Engine: How Systems, Not Willpower, Shape Who We Become"**
 
-**[https://v0.dev/chat/projects/lYqJser3Kd6](https://v0.dev/chat/projects/lYqJser3Kd6)**
+## Contact
 
-## How It Works
+- **Location**: Morrisville, North Carolina, USA
+- **Email**: nrajananalyst@gmail.com
+- **LinkedIn**: [linkedin.com/in/nrajananalyst](https://linkedin.com/in/nrajananalyst)
+- **GitHub**: [na-rajan](https://github.com/na-rajan)
+- **Twitter**: [@nrajananalyst](https://twitter.com/nrajananalyst)
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Feel free to reach out for consulting, speaking, or collaboration opportunities!
+
+## Technology Stack
+
+- **Framework**: Next.js 15.2.4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Deployment**: Vercel
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Build and Deploy
+
+- **Build**: `npm run build`
+- **Start**: `npm start`
+- **Lint**: `npm run lint`
+
+---
+
+*Built with modern web technologies and designed for optimal user experience across all devices.*
