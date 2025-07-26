@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://na-rajan.github.io/RajanPortfolioSite/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1 
