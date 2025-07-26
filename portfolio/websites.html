@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites & Applications - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Professional websites and applications built for various industries, showcasing full-stack development and design capabilities.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Websites Grid */
+        .websites-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .website-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .website-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .website-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--teal-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .website-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        .website-content {
+            padding: 2rem;
+        }
+        
+        .website-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .website-subtitle {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .website-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .website-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .website-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .website-features li::before {
+            content: '🌐';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .website-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+        
+        .website-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-tag {
+            background: var(--bg-light);
+            color: var(--text-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .websites-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .website-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .website-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Websites & Applications</h1>
+            <p>Professional websites and applications built for various industries, showcasing full-stack development capabilities, modern design principles, and user experience excellence.</p>
+        </div>
+    </section>
+
+    <!-- Websites Section -->
+    <section class="websites-section">
+        <div class="container">
+            <h2 class="section-title">Featured Websites</h2>
+            <div class="websites-grid">
+                <!-- FinSec AI Dashboard -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🔒</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">FinSec AI Dashboard</h3>
+                        <p class="website-subtitle">Financial Security Analytics Platform</p>
+                        <p class="website-description">
+                            A comprehensive financial security dashboard that provides real-time threat monitoring, risk assessment, and compliance reporting for financial institutions.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Real-time security monitoring</li>
+                            <li>Interactive data visualizations</li>
+                            <li>Automated compliance reporting</li>
+                            <li>Multi-tenant architecture</li>
+                            <li>Role-based access control</li>
+                            <li>Mobile-responsive design</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">10K+</div>
+                                <div class="stat-label">Daily Users</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">99.9%</div>
+                                <div class="stat-label">Uptime</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EdTech Learning Platform -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>📚</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">EduTech Learning Platform</h3>
+                        <p class="website-subtitle">AI-Powered Educational Technology</p>
+                        <p class="website-description">
+                            A modern learning management system with AI-powered personalization, progress tracking, and interactive content delivery for educational institutions.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Personalized learning paths</li>
+                            <li>AI-driven content recommendations</li>
+                            <li>Progress analytics dashboard</li>
+                            <li>Video conferencing integration</li>
+                            <li>Assessment and grading tools</li>
+                            <li>Parent-teacher communication</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">50K+</div>
+                                <div class="stat-label">Students</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Satisfaction</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthcare Compliance Portal -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🏥</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">Healthcare Compliance Portal</h3>
+                        <p class="website-subtitle">HIPAA & FDA Compliance Management</p>
+                        <p class="website-description">
+                            A comprehensive healthcare compliance management system that ensures HIPAA, FDA, and other regulatory requirements are met through automated workflows and documentation.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Azure</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Automated compliance workflows</li>
+                            <li>Document management system</li>
+                            <li>Audit trail and reporting</li>
+                            <li>Risk assessment tools</li>
+                            <li>Training and certification tracking</li>
+                            <li>Integration with EHR systems</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Compliance</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">500+</div>
+                                <div class="stat-label">Healthcare Orgs</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Compliance Guide</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Platform -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🛒</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">E-commerce Platform</h3>
+                        <p class="website-subtitle">Multi-Vendor Marketplace</p>
+                        <p class="website-description">
+                            A scalable e-commerce platform supporting multiple vendors, advanced inventory management, and AI-powered product recommendations for optimal user experience.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Multi-vendor marketplace</li>
+                            <li>AI product recommendations</li>
+                            <li>Advanced inventory management</li>
+                            <li>Payment gateway integration</li>
+                            <li>Order tracking and analytics</li>
+                            <li>Mobile app companion</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">$2M+</div>
+                                <div class="stat-label">Monthly Sales</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">100K+</div>
+                                <div class="stat-label">Products</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Performance Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Portfolio Site -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🏢</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">Corporate Portfolio Site</h3>
+                        <p class="website-subtitle">Executive Leadership Showcase</p>
+                        <p class="website-description">
+                            A professional corporate portfolio website designed for executive leadership, featuring thought leadership content, achievements, and strategic vision presentation.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Gatsby</span>
+                            <span class="tech-tag">Contentful</span>
+                            <span class="tech-tag">Netlify</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Executive biography and achievements</li>
+                            <li>Thought leadership blog</li>
+                            <li>Speaking engagement calendar</li>
+                            <li>Media and press coverage</li>
+                            <li>Contact and booking system</li>
+                            <li>SEO optimization</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">5K+</div>
+                                <div class="stat-label">Monthly Visitors</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">15%</div>
+                                <div class="stat-label">Engagement Rate</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Design Process</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SaaS Dashboard -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>📊</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">SaaS Analytics Dashboard</h3>
+                        <p class="website-subtitle">Business Intelligence Platform</p>
+                        <p class="website-description">
+                            A comprehensive SaaS analytics dashboard providing real-time business intelligence, customer insights, and performance metrics for data-driven decision making.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Real-time data visualization</li>
+                            <li>Custom dashboard builder</li>
+                            <li>Automated reporting</li>
+                            <li>Data export capabilities</li>
+                            <li>User permission management</li>
+                            <li>API integration</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">1M+</div>
+                                <div class="stat-label">Data Points</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">500+</div>
+                                <div class="stat-label">Active Users</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="#" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">API Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dr. Rajan Nagarajan. All rights reserved. | <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

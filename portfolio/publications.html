@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications & Research - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Academic papers, thesis work, and industry publications demonstrating thought leadership and research expertise in AI, psychology, and business.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Publications Grid */
+        .publications-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .publication-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .publication-header {
+            background: linear-gradient(135deg, var(--teal-color), var(--accent-color));
+            color: var(--text-light);
+            padding: 2rem;
+        }
+        
+        .publication-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .publication-meta {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .publication-content {
+            padding: 2rem;
+        }
+        
+        .publication-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .publication-details {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .publication-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .publication-details li::before {
+            content: '📖';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .publication-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+        
+        .publication-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .publication-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Publications & Research</h1>
+            <p>Academic papers, thesis work, and industry publications demonstrating thought leadership and research expertise in AI, organizational psychology, and business innovation.</p>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications-section">
+        <div class="container">
+            <h2 class="section-title">Research & Publications</h2>
+            <div class="publications-grid">
+                <!-- Doctoral Thesis -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"The Invisible Engine: How Systems Shape Organizational Behavior"</h3>
+                        <p class="publication-meta">Doctoral Thesis | IIM Bangalore | 2023</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Groundbreaking research on how organizational systems and processes influence individual behavior and decision-making, with implications for AI-driven workplace transformation.
+                        </p>
+                        <ul class="publication-details">
+                            <li>Qualitative analysis of 50+ organizations</li>
+                            <li>AI integration impact assessment</li>
+                            <li>Behavioral change frameworks</li>
+                            <li>Leadership transformation models</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Organizations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">300+</div>
+                                <div class="stat-label">Pages</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Pass Rate</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">Download PDF</a>
+                            <a href="#" class="btn btn-secondary">Abstract</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI in Financial Services -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"AI-Driven Transformation in Regulated Financial Services"</h3>
+                        <p class="publication-meta">Industry Paper | Fidelity Investments | 2024</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Comprehensive analysis of AI implementation strategies in financial services, focusing on compliance, risk management, and customer experience optimization.
+                        </p>
+                        <ul class="publication-details">
+                            <li>Regulatory compliance frameworks</li>
+                            <li>Risk assessment methodologies</li>
+                            <li>Customer experience optimization</li>
+                            <li>Implementation roadmaps</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">5K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">25</div>
+                                <div class="stat-label">Citations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.8</div>
+                                <div class="stat-label">Rating</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">Read Paper</a>
+                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Leadership -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"Leadership in Cybersecurity: Building Resilient Organizations"</h3>
+                        <p class="publication-meta">Research Paper | Tata Communications | 2023</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Research on effective leadership strategies for cybersecurity teams, including threat response, team building, and organizational resilience in the digital age.
+                        </p>
+                        <ul class="publication-details">
+                            <li>Cybersecurity team leadership</li>
+                            <li>Threat response strategies</li>
+                            <li>Organizational resilience</li>
+                            <li>Digital transformation</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">3K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">18</div>
+                                <div class="stat-label">Citations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.9</div>
+                                <div class="stat-label">Rating</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">Read Paper</a>
+                            <a href="#" class="btn btn-secondary">Case Studies</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EdTech Innovation -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"AI-Powered Personalization in Educational Technology"</h3>
+                        <p class="publication-meta">Academic Paper | EdTech Research | 2023</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Research on implementing AI-driven personalization in educational technology, focusing on learning outcomes, student engagement, and adaptive learning systems.
+                        </p>
+                        <ul class="publication-details">
+                            <li>Adaptive learning algorithms</li>
+                            <li>Student engagement metrics</li>
+                            <li>Learning outcome optimization</li>
+                            <li>Implementation strategies</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">2K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Citations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.7</div>
+                                <div class="stat-label">Rating</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">Read Paper</a>
+                            <a href="#" class="btn btn-secondary">Research Data</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizational Psychology -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"Behavioral Psychology in Product Management"</h3>
+                        <p class="publication-meta">Industry Article | Medium | 2024</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Series of articles exploring the intersection of behavioral psychology and product management, providing insights into user behavior and product design.
+                        </p>
+                        <ul class="publication-details">
+                            <li>User behavior analysis</li>
+                            <li>Product design psychology</li>
+                            <li>Decision-making frameworks</li>
+                            <li>Behavioral change strategies</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">10K+</div>
+                                <div class="stat-label">Views</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">500+</div>
+                                <div class="stat-label">Claps</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">15</div>
+                                <div class="stat-label">Articles</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="https://medium.com/@nrajananalyst" class="btn btn-primary">Read on Medium</a>
+                            <a href="#" class="btn btn-secondary">Article Series</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Ethics and Governance -->
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">"AI Ethics and Governance in Enterprise Applications"</h3>
+                        <p class="publication-meta">White Paper | AI Ethics Research | 2024</p>
+                    </div>
+                    <div class="publication-content">
+                        <p class="publication-description">
+                            Comprehensive white paper on implementing ethical AI practices and governance frameworks in enterprise applications, ensuring responsible AI deployment.
+                        </p>
+                        <ul class="publication-details">
+                            <li>AI ethics frameworks</li>
+                            <li>Governance structures</li>
+                            <li>Bias detection and mitigation</li>
+                            <li>Responsible AI deployment</li>
+                        </ul>
+                        <div class="publication-stats">
+                            <div class="stat">
+                                <div class="stat-value">8K+</div>
+                                <div class="stat-label">Downloads</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">35</div>
+                                <div class="stat-label">Citations</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">4.9</div>
+                                <div class="stat-label">Rating</div>
+                            </div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="btn btn-primary">Download PDF</a>
+                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dr. Rajan Nagarajan. All rights reserved. | <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

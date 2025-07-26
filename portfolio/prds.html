@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Requirements Documents - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Strategic PRDs showcasing product vision, market analysis, and execution roadmaps for AI-powered solutions in regulated industries.">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    
+    <style>
+        :root {
+            --primary-color: #1B2951;
+            --secondary-color: #2A3F7A;
+            --accent-color: #F59E0B;
+            --teal-color: #0D9488;
+            --text-light: #ffffff;
+            --text-dark: #374151;
+            --text-gray: #6B7280;
+            --bg-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        
+        .nav-brand a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* PRD Grid */
+        .prd-section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .prd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .prd-card {
+            background: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .prd-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .prd-header {
+            background: linear-gradient(135deg, var(--accent-color), var(--teal-color));
+            color: var(--text-light);
+            padding: 2rem;
+        }
+        
+        .prd-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .prd-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .prd-content {
+            padding: 2rem;
+        }
+        
+        .prd-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .prd-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prd-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .prd-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .prd-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        .prd-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .prd-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .prd-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .prd-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <a href="../index.html">Dr. Rajan Nagarajan</a>
+                </div>
+                <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Product Requirements Documents</h1>
+            <p>Strategic PRDs showcasing product vision, market analysis, and execution roadmaps for AI-powered solutions in regulated industries. Demonstrating executive-level product strategy and cross-functional leadership.</p>
+        </div>
+    </section>
+
+    <!-- PRD Section -->
+    <section class="prd-section">
+        <div class="container">
+            <h2 class="section-title">Strategic Product Documents</h2>
+            <div class="prd-grid">
+                <!-- AI-Powered Financial Advisor PRD -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">AI-Powered Financial Advisor</h3>
+                        <p class="prd-subtitle">Fidelity Investments | CRUX Team</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Comprehensive PRD for an AI-driven financial advisory platform that automates investment recommendations while ensuring regulatory compliance in the financial services sector.
+                        </p>
+                        <ul class="prd-features">
+                            <li>Market analysis and competitive landscape</li>
+                            <li>User journey mapping and personas</li>
+                            <li>Technical architecture and AI/ML requirements</li>
+                            <li>Regulatory compliance framework</li>
+                            <li>Go-to-market strategy and timeline</li>
+                            <li>Success metrics and KPIs</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">$50M</div>
+                                <div class="metric-label">Projected Revenue</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">12</div>
+                                <div class="metric-label">Months Timeline</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">View Full PRD</a>
+                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Threat Detection PRD -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">Cybersecurity Threat Detection Platform</h3>
+                        <p class="prd-subtitle">Tata Communications | Network Security</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Strategic PRD for an enterprise-grade cybersecurity platform leveraging AI and machine learning for real-time threat detection and response in managed security services.
+                        </p>
+                        <ul class="prd-features">
+                            <li>Threat intelligence and detection algorithms</li>
+                            <li>Real-time monitoring and alerting system</li>
+                            <li>Integration with existing security infrastructure</li>
+                            <li>Compliance with industry standards (SOC2, ISO27001)</li>
+                            <li>Scalability and performance requirements</li>
+                            <li>Customer onboarding and training</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">99.9%</div>
+                                <div class="metric-label">Detection Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">24/7</div>
+                                <div class="metric-label">Monitoring</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">View Full PRD</a>
+                            <a href="#" class="btn btn-secondary">Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EdTech Learning Platform PRD -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">AI-Enhanced Learning Management System</h3>
+                        <p class="prd-subtitle">EdTech Startup | Product Leadership</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Comprehensive PRD for an AI-powered learning platform that personalizes educational content and tracks student progress using behavioral psychology principles.
+                        </p>
+                        <ul class="prd-features">
+                            <li>Personalized learning paths and recommendations</li>
+                            <li>Progress tracking and analytics dashboard</li>
+                            <li>Content creation and management tools</li>
+                            <li>Student engagement and motivation features</li>
+                            <li>Integration with existing educational systems</li>
+                            <li>Data privacy and security measures</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Learning Improvement</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">10K+</div>
+                                <div class="metric-label">Active Users</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">View Full PRD</a>
+                            <a href="#" class="btn btn-secondary">User Research</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthcare AI Compliance PRD -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">Healthcare AI Compliance Framework</h3>
+                        <p class="prd-subtitle">Healthcare Technology | Regulatory Compliance</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Strategic PRD for an AI compliance framework ensuring healthcare applications meet HIPAA, FDA, and other regulatory requirements while maintaining innovation.
+                        </p>
+                        <ul class="prd-features">
+                            <li>HIPAA compliance and data protection</li>
+                            <li>FDA approval process for AI algorithms</li>
+                            <li>Audit trails and documentation requirements</li>
+                            <li>Risk assessment and mitigation strategies</li>
+                            <li>Training and certification programs</li>
+                            <li>Ongoing monitoring and updates</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Compliance Rate</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">6</div>
+                                <div class="metric-label">Months to Launch</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">View Full PRD</a>
+                            <a href="#" class="btn btn-secondary">Compliance Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dr. Rajan Nagarajan. All rights reserved. | <a href="../index.html">Back to Portfolio</a></p>
+        </div>
+    </footer>
+</body>
+</html> 
