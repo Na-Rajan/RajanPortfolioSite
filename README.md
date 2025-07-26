@@ -28,7 +28,7 @@ I'm an AI Product Manager with 10+ years of experience delivering data-driven so
 ## Contact
 
 - **Location**: Morrisville, North Carolina, USA
-- **Email**: nrajananalyst@gmail.com
+- **Email**: reachmeatrajan@gmail.com
 - **LinkedIn**: [linkedin.com/in/nrajananalyst](https://linkedin.com/in/nrajananalyst)
 - **GitHub**: [na-rajan](https://github.com/na-rajan)
 - **Twitter**: [@nrajananalyst](https://twitter.com/nrajananalyst)
