@@ -19,7 +19,7 @@ I'm an AI Product Manager with 10+ years of experience delivering data-driven so
 
 ### Education
 - **Doctorate in Management Psychology** 
-- **Doctorate in Artifical Intelligence (AI)**
+- **Doctorate in Artificial Intelligence (AI)**
 
 ### Author
 - **"The Invisible Engine: How Systems, Not Willpower, Shape Who We Become"**
