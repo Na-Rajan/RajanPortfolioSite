@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications & Research - Dr. Rajan Nagarajan</title>
-    <meta name="description" content="Academic papers, thesis work, and industry publications demonstrating thought leadership and research expertise in AI, psychology, and business.">
+    <meta name="description" content="Research publications in AI ethics, compliance security, data privacy, and machine learning applications.">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
     
     <style>
@@ -141,7 +141,7 @@
         }
         
         .publication-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
             line-height: 1.3;
         }
@@ -195,7 +195,7 @@
         }
         
         .stat-value {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: var(--accent-color);
         }
@@ -243,6 +243,18 @@
             transform: translateY(-2px);
         }
         
+        /* Featured Badge */
+        .featured-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: #10B981;
+            color: white;
+        }
+        
         /* Footer */
         .footer {
             background: var(--primary-color);
@@ -254,6 +266,45 @@
         .footer a {
             color: var(--accent-color);
             text-decoration: none;
+        }
+        
+        /* Availability Notice */
+        .availability-notice {
+            background: var(--bg-light);
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .notice-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .notice-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .notice-content h3 {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .notice-content p {
+            color: var(--text-dark);
+            margin: 0;
+            opacity: 0.8;
+            line-height: 1.5;
         }
         
         @media (max-width: 768px) {
@@ -271,6 +322,10 @@
             
             .publication-actions {
                 flex-direction: column;
+            }
+            
+            .publication-title {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -292,233 +347,177 @@
     <section class="hero">
         <div class="container">
             <h1>Publications & Research</h1>
-            <p>Academic papers, thesis work, and industry publications demonstrating thought leadership and research expertise in AI, organizational psychology, and business innovation.</p>
+            <p>Research publications demonstrating thought leadership in AI ethics, compliance security, data privacy, and machine learning applications across various domains.</p>
+        </div>
+    </section>
+
+    <!-- Available on Demand Notice -->
+    <section class="availability-notice">
+        <div class="container">
+            <div class="notice-card">
+                <div class="notice-icon">📋</div>
+                <div class="notice-content">
+                    <h3>Project Details Available on Demand</h3>
+                    <p>Full documentation, code, and implementation details will be shared for qualified opportunities and professional discussions.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Publications Section -->
     <section class="publications-section">
         <div class="container">
-            <h2 class="section-title">Research & Publications</h2>
+            <h2 class="section-title">Research Publications</h2>
             <div class="publications-grid">
-                <!-- Doctoral Thesis -->
+                <!-- Publication 1: ChatGPT Transcript Indexing -->
                 <div class="publication-card">
                     <div class="publication-header">
-                        <h3 class="publication-title">"The Invisible Engine: How Systems Shape Organizational Behavior"</h3>
-                        <p class="publication-meta">Doctoral Thesis | IIM Bangalore | 2023</p>
+                        <h3 class="publication-title">"When Private Chats Go Public: Stakeholder Impacts of ChatGPT Transcript Indexing"</h3>
+                        <p class="publication-meta">Published Research | Featured on LinkedIn | 2024</p>
                     </div>
                     <div class="publication-content">
+                        <div class="featured-badge">Featured Publication</div>
                         <p class="publication-description">
-                            Groundbreaking research on how organizational systems and processes influence individual behavior and decision-making, with implications for AI-driven workplace transformation.
+                            Comprehensive analysis of privacy implications and stakeholder impacts when ChatGPT transcripts become publicly indexed, examining ethical, legal, and social consequences.
                         </p>
                         <ul class="publication-details">
-                            <li>Qualitative analysis of 50+ organizations</li>
-                            <li>AI integration impact assessment</li>
-                            <li>Behavioral change frameworks</li>
-                            <li>Leadership transformation models</li>
+                            <li>Privacy impact assessment</li>
+                            <li>Stakeholder analysis framework</li>
+                            <li>Ethical implications of AI transparency</li>
+                            <li>Regulatory compliance considerations</li>
+                            <li>Risk mitigation strategies</li>
                         </ul>
                         <div class="publication-stats">
                             <div class="stat">
-                                <div class="stat-value">50+</div>
-                                <div class="stat-label">Organizations</div>
+                                <div class="stat-value">Published</div>
+                                <div class="stat-label">Status</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">300+</div>
-                                <div class="stat-label">Pages</div>
+                                <div class="stat-value">Featured</div>
+                                <div class="stat-label">LinkedIn</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">95%</div>
-                                <div class="stat-label">Pass Rate</div>
+                                <div class="stat-value">AI Ethics</div>
+                                <div class="stat-label">Domain</div>
                             </div>
                         </div>
                         <div class="publication-actions">
-                            <a href="#" class="btn btn-primary">Download PDF</a>
-                            <a href="#" class="btn btn-secondary">Abstract</a>
+                            <a href="https://drive.google.com/file/d/1fEaS8SjwnZxQRF0AaG-gDg5AL_4s2_FF/view" target="_blank" class="btn btn-primary">Read Publication</a>
+                            <a href="#" class="btn btn-secondary">Research Summary</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- AI in Financial Services -->
+                <!-- Publication 2: AI in Compliance Environment -->
                 <div class="publication-card">
                     <div class="publication-header">
-                        <h3 class="publication-title">"AI-Driven Transformation in Regulated Financial Services"</h3>
-                        <p class="publication-meta">Industry Paper | Fidelity Investments | 2024</p>
+                        <h3 class="publication-title">"Risk of Using AI in Compliance Environment and What Are the Secure Ways to Do It"</h3>
+                        <p class="publication-meta">Industry Research | Compliance & Security | 2024</p>
                     </div>
                     <div class="publication-content">
                         <p class="publication-description">
-                            Comprehensive analysis of AI implementation strategies in financial services, focusing on compliance, risk management, and customer experience optimization.
+                            In-depth examination of risks associated with AI implementation in compliance-heavy environments and practical frameworks for secure AI deployment.
                         </p>
                         <ul class="publication-details">
-                            <li>Regulatory compliance frameworks</li>
-                            <li>Risk assessment methodologies</li>
-                            <li>Customer experience optimization</li>
-                            <li>Implementation roadmaps</li>
+                            <li>Compliance risk assessment</li>
+                            <li>Secure AI deployment frameworks</li>
+                            <li>Regulatory alignment strategies</li>
+                            <li>Data governance protocols</li>
+                            <li>Audit trail mechanisms</li>
                         </ul>
                         <div class="publication-stats">
                             <div class="stat">
-                                <div class="stat-value">5K+</div>
-                                <div class="stat-label">Downloads</div>
+                                <div class="stat-value">Compliance</div>
+                                <div class="stat-label">Focus Area</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">25</div>
-                                <div class="stat-label">Citations</div>
+                                <div class="stat-value">Security</div>
+                                <div class="stat-label">Domain</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">4.8</div>
-                                <div class="stat-label">Rating</div>
+                                <div class="stat-value">Enterprise</div>
+                                <div class="stat-label">Application</div>
                             </div>
                         </div>
                         <div class="publication-actions">
                             <a href="#" class="btn btn-primary">Read Paper</a>
-                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                            <a href="#" class="btn btn-secondary">Framework Guide</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cybersecurity Leadership -->
+                <!-- Publication 3: Pseudonymization in Large Scale -->
                 <div class="publication-card">
                     <div class="publication-header">
-                        <h3 class="publication-title">"Leadership in Cybersecurity: Building Resilient Organizations"</h3>
-                        <p class="publication-meta">Research Paper | Tata Communications | 2023</p>
+                        <h3 class="publication-title">"Pseudonymization in Large Scale - Myth or Actual Financial Use Case"</h3>
+                        <p class="publication-meta">Financial Technology Research | Data Privacy | 2024</p>
                     </div>
                     <div class="publication-content">
                         <p class="publication-description">
-                            Research on effective leadership strategies for cybersecurity teams, including threat response, team building, and organizational resilience in the digital age.
+                            Critical analysis of large-scale pseudonymization techniques in financial services, evaluating practical implementation challenges and real-world use cases.
                         </p>
                         <ul class="publication-details">
-                            <li>Cybersecurity team leadership</li>
-                            <li>Threat response strategies</li>
-                            <li>Organizational resilience</li>
-                            <li>Digital transformation</li>
+                            <li>Large-scale pseudonymization techniques</li>
+                            <li>Financial services implementation</li>
+                            <li>Privacy-preserving analytics</li>
+                            <li>Regulatory compliance alignment</li>
+                            <li>Performance impact analysis</li>
                         </ul>
                         <div class="publication-stats">
                             <div class="stat">
-                                <div class="stat-value">3K+</div>
-                                <div class="stat-label">Downloads</div>
+                                <div class="stat-value">FinTech</div>
+                                <div class="stat-label">Industry</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">18</div>
-                                <div class="stat-label">Citations</div>
+                                <div class="stat-value">Privacy</div>
+                                <div class="stat-label">Focus</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">4.9</div>
-                                <div class="stat-label">Rating</div>
+                                <div class="stat-value">Scale</div>
+                                <div class="stat-label">Challenge</div>
                             </div>
                         </div>
                         <div class="publication-actions">
-                            <a href="#" class="btn btn-primary">Read Paper</a>
-                            <a href="#" class="btn btn-secondary">Case Studies</a>
+                            <a href="#" class="btn btn-primary">View Research</a>
+                            <a href="#" class="btn btn-secondary">Use Cases</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- EdTech Innovation -->
+                <!-- Publication 4: ML in Security Identification -->
                 <div class="publication-card">
                     <div class="publication-header">
-                        <h3 class="publication-title">"AI-Powered Personalization in Educational Technology"</h3>
-                        <p class="publication-meta">Academic Paper | EdTech Research | 2023</p>
+                        <h3 class="publication-title">"Use of ML in Security Identification: How Large Language Models is Changing the Landscape"</h3>
+                        <p class="publication-meta">AI Security Research | Machine Learning | 2024</p>
                     </div>
                     <div class="publication-content">
                         <p class="publication-description">
-                            Research on implementing AI-driven personalization in educational technology, focusing on learning outcomes, student engagement, and adaptive learning systems.
+                            Comprehensive study on the transformative impact of large language models on security identification systems and threat detection methodologies.
                         </p>
                         <ul class="publication-details">
-                            <li>Adaptive learning algorithms</li>
-                            <li>Student engagement metrics</li>
-                            <li>Learning outcome optimization</li>
-                            <li>Implementation strategies</li>
+                            <li>LLM-powered security systems</li>
+                            <li>Threat identification algorithms</li>
+                            <li>Behavioral pattern recognition</li>
+                            <li>Real-time security analytics</li>
+                            <li>Next-generation threat detection</li>
                         </ul>
                         <div class="publication-stats">
                             <div class="stat">
-                                <div class="stat-value">2K+</div>
-                                <div class="stat-label">Downloads</div>
+                                <div class="stat-value">ML/AI</div>
+                                <div class="stat-label">Technology</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">12</div>
-                                <div class="stat-label">Citations</div>
+                                <div class="stat-value">Security</div>
+                                <div class="stat-label">Application</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">4.7</div>
-                                <div class="stat-label">Rating</div>
+                                <div class="stat-value">LLM</div>
+                                <div class="stat-label">Innovation</div>
                             </div>
                         </div>
                         <div class="publication-actions">
-                            <a href="#" class="btn btn-primary">Read Paper</a>
-                            <a href="#" class="btn btn-secondary">Research Data</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Organizational Psychology -->
-                <div class="publication-card">
-                    <div class="publication-header">
-                        <h3 class="publication-title">"Behavioral Psychology in Product Management"</h3>
-                        <p class="publication-meta">Industry Article | Medium | 2024</p>
-                    </div>
-                    <div class="publication-content">
-                        <p class="publication-description">
-                            Series of articles exploring the intersection of behavioral psychology and product management, providing insights into user behavior and product design.
-                        </p>
-                        <ul class="publication-details">
-                            <li>User behavior analysis</li>
-                            <li>Product design psychology</li>
-                            <li>Decision-making frameworks</li>
-                            <li>Behavioral change strategies</li>
-                        </ul>
-                        <div class="publication-stats">
-                            <div class="stat">
-                                <div class="stat-value">10K+</div>
-                                <div class="stat-label">Views</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">500+</div>
-                                <div class="stat-label">Claps</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">15</div>
-                                <div class="stat-label">Articles</div>
-                            </div>
-                        </div>
-                        <div class="publication-actions">
-                            <a href="https://medium.com/@reachmeatrajan" class="btn btn-primary">Read on Medium</a>
-                            <a href="#" class="btn btn-secondary">Article Series</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Ethics and Governance -->
-                <div class="publication-card">
-                    <div class="publication-header">
-                        <h3 class="publication-title">"AI Ethics and Governance in Enterprise Applications"</h3>
-                        <p class="publication-meta">White Paper | AI Ethics Research | 2024</p>
-                    </div>
-                    <div class="publication-content">
-                        <p class="publication-description">
-                            Comprehensive white paper on implementing ethical AI practices and governance frameworks in enterprise applications, ensuring responsible AI deployment.
-                        </p>
-                        <ul class="publication-details">
-                            <li>AI ethics frameworks</li>
-                            <li>Governance structures</li>
-                            <li>Bias detection and mitigation</li>
-                            <li>Responsible AI deployment</li>
-                        </ul>
-                        <div class="publication-stats">
-                            <div class="stat">
-                                <div class="stat-value">8K+</div>
-                                <div class="stat-label">Downloads</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">35</div>
-                                <div class="stat-label">Citations</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">4.9</div>
-                                <div class="stat-label">Rating</div>
-                            </div>
-                        </div>
-                        <div class="publication-actions">
-                            <a href="#" class="btn btn-primary">Download PDF</a>
-                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                            <a href="#" class="btn btn-primary">Read Study</a>
+                            <a href="#" class="btn btn-secondary">Technical Analysis</a>
                         </div>
                     </div>
                 </div>
@@ -533,4 +532,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>

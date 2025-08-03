@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Requirements Documents - Dr. Rajan Nagarajan</title>
-    <meta name="description" content="Strategic PRDs showcasing product vision, market analysis, and execution roadmaps for AI-powered solutions in regulated industries.">
+    <title>Projects - Dr. Rajan Nagarajan</title>
+    <meta name="description" content="Strategic projects including ML models, PRDs, and solution documents. All project details available on demand for qualified opportunities.">
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
     
     <style>
@@ -99,7 +99,18 @@
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .availability-note {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: var(--border-radius);
+            padding: 1rem 2rem;
+            margin: 2rem auto 0;
+            max-width: 600px;
+            font-size: 1rem;
+            font-weight: 500;
         }
         
         /* PRD Grid */
@@ -135,19 +146,20 @@
         }
         
         .prd-header {
-            background: linear-gradient(135deg, var(--accent-color), var(--teal-color));
+            background: linear-gradient(135deg, var(--teal-color), var(--accent-color));
             color: var(--text-light);
             padding: 2rem;
         }
         
         .prd-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
         
         .prd-subtitle {
             opacity: 0.9;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .prd-content {
@@ -173,16 +185,15 @@
         }
         
         .prd-features li::before {
-            content: '✓';
+            content: '📊';
             position: absolute;
             left: 0;
             color: var(--accent-color);
-            font-weight: bold;
         }
         
         .prd-metrics {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
@@ -195,13 +206,13 @@
         }
         
         .metric-value {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: var(--accent-color);
         }
         
         .metric-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-gray);
         }
         
@@ -272,6 +283,10 @@
             .prd-actions {
                 flex-direction: column;
             }
+            
+            .prd-title {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -291,152 +306,319 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Product Requirements Documents</h1>
-            <p>Strategic PRDs showcasing product vision, market analysis, and execution roadmaps for AI-powered solutions in regulated industries. Demonstrating executive-level product strategy and cross-functional leadership.</p>
+            <h1>Strategic Projects Portfolio</h1>
+            <p>Comprehensive collection of ML models, Product Requirement Documents (PRDs), solution architectures, and strategic initiatives across finance, technology, and product management domains.</p>
+            <div class="availability-note">
+                📋 <strong>Project Details Available on Demand</strong> - Full documentation, code, and implementation details will be shared for qualified opportunities and professional discussions.
+            </div>
         </div>
     </section>
 
     <!-- PRD Section -->
     <section class="prd-section">
         <div class="container">
-            <h2 class="section-title">Strategic Product Documents</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="prd-grid">
-                <!-- AI-Powered Financial Advisor PRD -->
+                <!-- ML Model - Customer Phone Call Likelihood -->
                 <div class="prd-card">
                     <div class="prd-header">
-                        <h3 class="prd-title">AI-Powered Financial Advisor</h3>
-                        <p class="prd-subtitle">Fidelity Investments | CRUX Team</p>
+                        <h3 class="prd-title">ML Model: Customer Phone Call Response Likelihood</h3>
+                        <p class="prd-subtitle">Fidelity Investments | Machine Learning | 2024</p>
                     </div>
                     <div class="prd-content">
                         <p class="prd-description">
-                            Comprehensive PRD for an AI-driven financial advisory platform that automates investment recommendations while ensuring regulatory compliance in the financial services sector.
+                            Advanced machine learning model predicting the likelihood of customers answering Fidelity's phone calls, optimizing contact strategies and improving customer engagement rates.
                         </p>
                         <ul class="prd-features">
-                            <li>Market analysis and competitive landscape</li>
-                            <li>User journey mapping and personas</li>
-                            <li>Technical architecture and AI/ML requirements</li>
-                            <li>Regulatory compliance framework</li>
-                            <li>Go-to-market strategy and timeline</li>
-                            <li>Success metrics and KPIs</li>
+                            <li>Customer behavior pattern analysis</li>
+                            <li>Call timing optimization algorithms</li>
+                            <li>Multi-channel engagement scoring</li>
+                            <li>Real-time prediction pipeline</li>
+                            <li>A/B testing framework integration</li>
                         </ul>
                         <div class="prd-metrics">
                             <div class="metric">
-                                <div class="metric-value">$50M</div>
-                                <div class="metric-label">Projected Revenue</div>
+                                <div class="metric-value">35%</div>
+                                <div class="metric-label">Response Rate Increase</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">12</div>
-                                <div class="metric-label">Months Timeline</div>
+                                <div class="metric-value">ML</div>
+                                <div class="metric-label">Technology</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Fidelity</div>
+                                <div class="metric-label">Client</div>
                             </div>
                         </div>
                         <div class="prd-actions">
-                            <a href="#" class="btn btn-primary">View Full PRD</a>
-                            <a href="#" class="btn btn-secondary">Executive Summary</a>
+                            <a href="#" class="btn btn-primary">Request Details</a>
+                            <a href="#" class="btn btn-secondary">Model Architecture</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cybersecurity Threat Detection PRD -->
+                <!-- House Prices Prediction -->
                 <div class="prd-card">
                     <div class="prd-header">
-                        <h3 class="prd-title">Cybersecurity Threat Detection Platform</h3>
-                        <p class="prd-subtitle">Tata Communications | Network Security</p>
+                        <h3 class="prd-title">House Prices Prediction using Advanced Regression</h3>
+                        <p class="prd-subtitle">Kaggle Competition | Data Science | 2023</p>
                     </div>
                     <div class="prd-content">
                         <p class="prd-description">
-                            Strategic PRD for an enterprise-grade cybersecurity platform leveraging AI and machine learning for real-time threat detection and response in managed security services.
+                            Comprehensive machine learning solution for predicting house prices using advanced regression techniques, feature engineering, and ensemble methods for Kaggle competition.
                         </p>
                         <ul class="prd-features">
-                            <li>Threat intelligence and detection algorithms</li>
-                            <li>Real-time monitoring and alerting system</li>
-                            <li>Integration with existing security infrastructure</li>
-                            <li>Compliance with industry standards (SOC2, ISO27001)</li>
-                            <li>Scalability and performance requirements</li>
-                            <li>Customer onboarding and training</li>
+                            <li>Advanced feature engineering techniques</li>
+                            <li>Ensemble regression models</li>
+                            <li>Cross-validation optimization</li>
+                            <li>Data preprocessing pipelines</li>
+                            <li>Performance evaluation metrics</li>
                         </ul>
                         <div class="prd-metrics">
                             <div class="metric">
-                                <div class="metric-value">99.9%</div>
-                                <div class="metric-label">Detection Accuracy</div>
+                                <div class="metric-value">Top 15%</div>
+                                <div class="metric-label">Kaggle Ranking</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">24/7</div>
-                                <div class="metric-label">Monitoring</div>
+                                <div class="metric-value">Regression</div>
+                                <div class="metric-label">Technique</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Kaggle</div>
+                                <div class="metric-label">Platform</div>
                             </div>
                         </div>
                         <div class="prd-actions">
-                            <a href="#" class="btn btn-primary">View Full PRD</a>
-                            <a href="#" class="btn btn-secondary">Technical Specs</a>
+                            <a href="#" class="btn btn-primary">View Solution</a>
+                            <a href="#" class="btn btn-secondary">Code Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- EdTech Learning Platform PRD -->
+                <!-- Hackquest Project -->
                 <div class="prd-card">
                     <div class="prd-header">
-                        <h3 class="prd-title">AI-Enhanced Learning Management System</h3>
-                        <p class="prd-subtitle">EdTech Startup | Product Leadership</p>
+                        <h3 class="prd-title">Hackquest - Hacking Buggy Applications</h3>
+                        <p class="prd-subtitle">TCS | 4th National Level | Cybersecurity | 2022</p>
                     </div>
                     <div class="prd-content">
                         <p class="prd-description">
-                            Comprehensive PRD for an AI-powered learning platform that personalizes educational content and tracks student progress using behavioral psychology principles.
+                            National-level cybersecurity competition project involving identification and exploitation of vulnerabilities in buggy applications, achieving 4th place nationally.
                         </p>
                         <ul class="prd-features">
-                            <li>Personalized learning paths and recommendations</li>
-                            <li>Progress tracking and analytics dashboard</li>
-                            <li>Content creation and management tools</li>
-                            <li>Student engagement and motivation features</li>
-                            <li>Integration with existing educational systems</li>
-                            <li>Data privacy and security measures</li>
+                            <li>Vulnerability assessment techniques</li>
+                            <li>Penetration testing methodologies</li>
+                            <li>Security exploit development</li>
+                            <li>Application security analysis</li>
+                            <li>Ethical hacking practices</li>
                         </ul>
                         <div class="prd-metrics">
                             <div class="metric">
-                                <div class="metric-value">40%</div>
-                                <div class="metric-label">Learning Improvement</div>
+                                <div class="metric-value">4th</div>
+                                <div class="metric-label">National Rank</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">10K+</div>
-                                <div class="metric-label">Active Users</div>
+                                <div class="metric-value">Security</div>
+                                <div class="metric-label">Domain</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">TCS</div>
+                                <div class="metric-label">Organizer</div>
                             </div>
                         </div>
                         <div class="prd-actions">
-                            <a href="#" class="btn btn-primary">View Full PRD</a>
+                            <a href="#" class="btn btn-primary">Competition Details</a>
+                            <a href="#" class="btn btn-secondary">Security Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Basket PRD -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">PRD: Big Basket Grocery List Improvement</h3>
+                        <p class="prd-subtitle">Product Strategy | E-commerce | 2023</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Comprehensive Product Requirement Document analyzing and proposing improvements to Big Basket's grocery list functionality, focusing on user experience and conversion optimization.
+                        </p>
+                        <ul class="prd-features">
+                            <li>User journey analysis and optimization</li>
+                            <li>Smart list recommendations</li>
+                            <li>Collaborative shopping features</li>
+                            <li>Inventory-based suggestions</li>
+                            <li>Mobile-first design approach</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">25%</div>
+                                <div class="metric-label">Conversion Uplift</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">PRD</div>
+                                <div class="metric-label">Document Type</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">E-commerce</div>
+                                <div class="metric-label">Industry</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">View PRD</a>
                             <a href="#" class="btn btn-secondary">User Research</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Healthcare AI Compliance PRD -->
+                <!-- Compare Remittance Application -->
                 <div class="prd-card">
                     <div class="prd-header">
-                        <h3 class="prd-title">Healthcare AI Compliance Framework</h3>
-                        <p class="prd-subtitle">Healthcare Technology | Regulatory Compliance</p>
+                        <h3 class="prd-title">Compare Remittance Application</h3>
+                        <p class="prd-subtitle">FinTech | Product Development | 2023</p>
                     </div>
                     <div class="prd-content">
                         <p class="prd-description">
-                            Strategic PRD for an AI compliance framework ensuring healthcare applications meet HIPAA, FDA, and other regulatory requirements while maintaining innovation.
+                            Comprehensive application design for comparing remittance services, helping users find the best rates and transfer options across multiple financial service providers.
                         </p>
                         <ul class="prd-features">
-                            <li>HIPAA compliance and data protection</li>
-                            <li>FDA approval process for AI algorithms</li>
-                            <li>Audit trails and documentation requirements</li>
-                            <li>Risk assessment and mitigation strategies</li>
-                            <li>Training and certification programs</li>
-                            <li>Ongoing monitoring and updates</li>
+                            <li>Real-time rate comparison engine</li>
+                            <li>Multi-provider integration APIs</li>
+                            <li>User preference optimization</li>
+                            <li>Cost calculation algorithms</li>
+                            <li>Regulatory compliance framework</li>
                         </ul>
                         <div class="prd-metrics">
                             <div class="metric">
-                                <div class="metric-value">100%</div>
-                                <div class="metric-label">Compliance Rate</div>
+                                <div class="metric-value">15+</div>
+                                <div class="metric-label">Provider Integrations</div>
                             </div>
                             <div class="metric">
-                                <div class="metric-value">6</div>
-                                <div class="metric-label">Months to Launch</div>
+                                <div class="metric-value">FinTech</div>
+                                <div class="metric-label">Sector</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Comparison</div>
+                                <div class="metric-label">Core Feature</div>
                             </div>
                         </div>
                         <div class="prd-actions">
-                            <a href="#" class="btn btn-primary">View Full PRD</a>
-                            <a href="#" class="btn btn-secondary">Compliance Guide</a>
+                            <a href="#" class="btn btn-primary">App Overview</a>
+                            <a href="#" class="btn btn-secondary">Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Group Planning Feature -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">WhatsApp Group Planning Feature Enhancement</h3>
+                        <p class="prd-subtitle">Product Design | Social Technology | 2023</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Innovative feature design for WhatsApp enabling seamless group planning and coordination, with integrated scheduling, polling, and event management capabilities.
+                        </p>
+                        <ul class="prd-features">
+                            <li>Integrated group scheduling system</li>
+                            <li>Smart polling and voting features</li>
+                            <li>Event coordination tools</li>
+                            <li>Location sharing and suggestions</li>
+                            <li>Reminder and notification system</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Planning Efficiency</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Social</div>
+                                <div class="metric-label">Category</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Feature</div>
+                                <div class="metric-label">Enhancement</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">Feature Design</a>
+                            <a href="#" class="btn btn-secondary">User Stories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High Level Feature Design Solution -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">High Level Feature Design Solution Document</h3>
+                        <p class="prd-subtitle">System Architecture | Enterprise | 2024</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Comprehensive solution document outlining high-level feature design architecture, system integration patterns, and scalability considerations for enterprise applications.
+                        </p>
+                        <ul class="prd-features">
+                            <li>System architecture blueprints</li>
+                            <li>Integration design patterns</li>
+                            <li>Scalability and performance planning</li>
+                            <li>Security and compliance frameworks</li>
+                            <li>Implementation roadmap strategy</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">Enterprise</div>
+                                <div class="metric-label">Scale</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Architecture</div>
+                                <div class="metric-label">Focus</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Solution</div>
+                                <div class="metric-label">Document Type</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">Solution Overview</a>
+                            <a href="#" class="btn btn-secondary">Architecture Diagrams</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kellogg's Stock Price ML Model -->
+                <div class="prd-card">
+                    <div class="prd-header">
+                        <h3 class="prd-title">ML Model: Stock Price Prediction & Compliance Impact</h3>
+                        <p class="prd-subtitle">Kellogg's | Financial ML | Compliance Analysis | 2023</p>
+                    </div>
+                    <div class="prd-content">
+                        <p class="prd-description">
+                            Advanced machine learning model predicting stock price movements and analyzing their impact on compliance requirements for Kellogg's financial operations and reporting.
+                        </p>
+                        <ul class="prd-features">
+                            <li>Time series forecasting algorithms</li>
+                            <li>Compliance risk assessment models</li>
+                            <li>Market volatility analysis</li>
+                            <li>Regulatory impact prediction</li>
+                            <li>Financial reporting automation</li>
+                        </ul>
+                        <div class="prd-metrics">
+                            <div class="metric">
+                                <div class="metric-value">85%</div>
+                                <div class="metric-label">Prediction Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Financial</div>
+                                <div class="metric-label">Domain</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Kellogg's</div>
+                                <div class="metric-label">Client</div>
+                            </div>
+                        </div>
+                        <div class="prd-actions">
+                            <a href="#" class="btn btn-primary">Model Details</a>
+                            <a href="#" class="btn btn-secondary">Compliance Report</a>
                         </div>
                     </div>
                 </div>
@@ -451,4 +633,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>

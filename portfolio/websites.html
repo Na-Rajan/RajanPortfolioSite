@@ -290,6 +290,45 @@
             text-decoration: none;
         }
         
+        /* Availability Notice */
+        .availability-notice {
+            background: var(--bg-light);
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .notice-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .notice-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .notice-content h3 {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .notice-content p {
+            color: var(--text-dark);
+            margin: 0;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+        
         @media (max-width: 768px) {
             .websites-grid {
                 grid-template-columns: 1fr;
@@ -330,259 +369,230 @@
         </div>
     </section>
 
+    <!-- Available on Demand Notice -->
+    <section class="availability-notice">
+        <div class="container">
+            <div class="notice-card">
+                <div class="notice-icon">📋</div>
+                <div class="notice-content">
+                    <h3>Project Details Available on Demand</h3>
+                    <p>Full documentation, code, and implementation details will be shared for qualified opportunities and professional discussions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Websites Section -->
     <section class="websites-section">
         <div class="container">
             <h2 class="section-title">Featured Websites</h2>
             <div class="websites-grid">
-                <!-- FinSec AI Dashboard -->
-                <div class="website-card">
-                    <div class="website-image">
-                        <span>🔒</span>
-                    </div>
-                    <div class="website-content">
-                        <h3 class="website-title">FinSec AI Dashboard</h3>
-                        <p class="website-subtitle">Financial Security Analytics Platform</p>
-                        <p class="website-description">
-                            A comprehensive financial security dashboard that provides real-time threat monitoring, risk assessment, and compliance reporting for financial institutions.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <ul class="website-features">
-                            <li>Real-time security monitoring</li>
-                            <li>Interactive data visualizations</li>
-                            <li>Automated compliance reporting</li>
-                            <li>Multi-tenant architecture</li>
-                            <li>Role-based access control</li>
-                            <li>Mobile-responsive design</li>
-                        </ul>
-                        <div class="website-stats">
-                            <div class="stat">
-                                <div class="stat-value">10K+</div>
-                                <div class="stat-label">Daily Users</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">99.9%</div>
-                                <div class="stat-label">Uptime</div>
-                            </div>
-                        </div>
-                        <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">Case Study</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EdTech Learning Platform -->
-                <div class="website-card">
-                    <div class="website-image">
-                        <span>📚</span>
-                    </div>
-                    <div class="website-content">
-                        <h3 class="website-title">EduTech Learning Platform</h3>
-                        <p class="website-subtitle">AI-Powered Educational Technology</p>
-                        <p class="website-description">
-                            A modern learning management system with AI-powered personalization, progress tracking, and interactive content delivery for educational institutions.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">TensorFlow</span>
-                        </div>
-                        <ul class="website-features">
-                            <li>Personalized learning paths</li>
-                            <li>AI-driven content recommendations</li>
-                            <li>Progress analytics dashboard</li>
-                            <li>Video conferencing integration</li>
-                            <li>Assessment and grading tools</li>
-                            <li>Parent-teacher communication</li>
-                        </ul>
-                        <div class="website-stats">
-                            <div class="stat">
-                                <div class="stat-value">50K+</div>
-                                <div class="stat-label">Students</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">95%</div>
-                                <div class="stat-label">Satisfaction</div>
-                            </div>
-                        </div>
-                        <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Healthcare Compliance Portal -->
-                <div class="website-card">
-                    <div class="website-image">
-                        <span>🏥</span>
-                    </div>
-                    <div class="website-content">
-                        <h3 class="website-title">Healthcare Compliance Portal</h3>
-                        <p class="website-subtitle">HIPAA & FDA Compliance Management</p>
-                        <p class="website-description">
-                            A comprehensive healthcare compliance management system that ensures HIPAA, FDA, and other regulatory requirements are met through automated workflows and documentation.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">ASP.NET Core</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">Azure</span>
-                        </div>
-                        <ul class="website-features">
-                            <li>Automated compliance workflows</li>
-                            <li>Document management system</li>
-                            <li>Audit trail and reporting</li>
-                            <li>Risk assessment tools</li>
-                            <li>Training and certification tracking</li>
-                            <li>Integration with EHR systems</li>
-                        </ul>
-                        <div class="website-stats">
-                            <div class="stat">
-                                <div class="stat-value">100%</div>
-                                <div class="stat-label">Compliance</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">500+</div>
-                                <div class="stat-label">Healthcare Orgs</div>
-                            </div>
-                        </div>
-                        <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">Compliance Guide</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- E-commerce Platform -->
+                <!-- And Stirred - E-commerce Application -->
                 <div class="website-card">
                     <div class="website-image">
                         <span>🛒</span>
                     </div>
                     <div class="website-content">
-                        <h3 class="website-title">E-commerce Platform</h3>
-                        <p class="website-subtitle">Multi-Vendor Marketplace</p>
+                        <h3 class="website-title">And Stirred</h3>
+                        <p class="website-subtitle">E-commerce Application</p>
                         <p class="website-description">
-                            A scalable e-commerce platform supporting multiple vendors, advanced inventory management, and AI-powered product recommendations for optimal user experience.
+                            A complete e-commerce solution developed in just one week for a customer in 2017. Features modern shopping experience with secure payment processing and inventory management.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Stripe</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
                         </div>
                         <ul class="website-features">
-                            <li>Multi-vendor marketplace</li>
-                            <li>AI product recommendations</li>
-                            <li>Advanced inventory management</li>
-                            <li>Payment gateway integration</li>
-                            <li>Order tracking and analytics</li>
-                            <li>Mobile app companion</li>
+                            <li>Product catalog management</li>
+                            <li>Shopping cart functionality</li>
+                            <li>Secure payment gateway</li>
+                            <li>Order tracking system</li>
+                            <li>Customer account management</li>
+                            <li>Responsive design</li>
                         </ul>
                         <div class="website-stats">
                             <div class="stat">
-                                <div class="stat-value">$2M+</div>
-                                <div class="stat-label">Monthly Sales</div>
+                                <div class="stat-value">2017</div>
+                                <div class="stat-label">Year Built</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">100K+</div>
-                                <div class="stat-label">Products</div>
+                                <div class="stat-value">1 Week</div>
+                                <div class="stat-label">Development Time</div>
                             </div>
                         </div>
                         <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">Performance Report</a>
+                            <a href="https://www.andstirred.com/" target="_blank" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Case Study</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Corporate Portfolio Site -->
+                <!-- PrimeFort - Security Solutions -->
                 <div class="website-card">
                     <div class="website-image">
-                        <span>🏢</span>
+                        <span>🔒</span>
                     </div>
                     <div class="website-content">
-                        <h3 class="website-title">Corporate Portfolio Site</h3>
-                        <p class="website-subtitle">Executive Leadership Showcase</p>
+                        <h3 class="website-title">PrimeFort</h3>
+                        <p class="website-subtitle">Security Solutions Organization</p>
                         <p class="website-description">
-                            A professional corporate portfolio website designed for executive leadership, featuring thought leadership content, achievements, and strategic vision presentation.
+                            Professional website for a security solutions startup, created and maintained for 5 years. Features comprehensive security service information and client portal.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Gatsby</span>
-                            <span class="tech-tag">Contentful</span>
-                            <span class="tech-tag">Netlify</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">CSS3</span>
                         </div>
                         <ul class="website-features">
-                            <li>Executive biography and achievements</li>
-                            <li>Thought leadership blog</li>
-                            <li>Speaking engagement calendar</li>
-                            <li>Media and press coverage</li>
-                            <li>Contact and booking system</li>
+                            <li>Security service showcase</li>
+                            <li>Client testimonials</li>
+                            <li>Contact and inquiry forms</li>
+                            <li>Service portfolio</li>
+                            <li>Blog and news section</li>
                             <li>SEO optimization</li>
                         </ul>
                         <div class="website-stats">
                             <div class="stat">
-                                <div class="stat-value">5K+</div>
-                                <div class="stat-label">Monthly Visitors</div>
+                                <div class="stat-value">5 Years</div>
+                                <div class="stat-label">Maintained</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">15%</div>
-                                <div class="stat-label">Engagement Rate</div>
+                                <div class="stat-value">Security</div>
+                                <div class="stat-label">Industry</div>
                             </div>
                         </div>
                         <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">Design Process</a>
+                            <a href="https://www.primefort.net/" target="_blank" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Maintenance Log</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- SaaS Dashboard -->
+                <!-- Southern Song -->
                 <div class="website-card">
                     <div class="website-image">
-                        <span>📊</span>
+                        <span>🎵</span>
                     </div>
                     <div class="website-content">
-                        <h3 class="website-title">SaaS Analytics Dashboard</h3>
-                        <p class="website-subtitle">Business Intelligence Platform</p>
+                        <h3 class="website-title">Southern Song</h3>
+                        <p class="website-subtitle">Music & Entertainment Platform</p>
                         <p class="website-description">
-                            A comprehensive SaaS analytics dashboard providing real-time business intelligence, customer insights, and performance metrics for data-driven decision making.
+                            A music and entertainment website created and maintained from 2016 to 2019. Features artist profiles, music streaming, and event management capabilities.
                         </p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">jQuery</span>
                         </div>
                         <ul class="website-features">
-                            <li>Real-time data visualization</li>
-                            <li>Custom dashboard builder</li>
-                            <li>Automated reporting</li>
-                            <li>Data export capabilities</li>
-                            <li>User permission management</li>
-                            <li>API integration</li>
+                            <li>Artist profile management</li>
+                            <li>Music streaming integration</li>
+                            <li>Event calendar</li>
+                            <li>Photo galleries</li>
+                            <li>Social media integration</li>
+                            <li>Mobile responsive design</li>
                         </ul>
                         <div class="website-stats">
                             <div class="stat">
-                                <div class="stat-value">1M+</div>
-                                <div class="stat-label">Data Points</div>
+                                <div class="stat-value">2016-2019</div>
+                                <div class="stat-label">Active Period</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-value">500+</div>
-                                <div class="stat-label">Active Users</div>
+                                <div class="stat-value">Music</div>
+                                <div class="stat-label">Industry</div>
                             </div>
                         </div>
                         <div class="website-actions">
-                            <a href="#" class="btn btn-primary">View Live Site</a>
-                            <a href="#" class="btn btn-secondary">API Docs</a>
+                            <a href="https://southernsong.co/" target="_blank" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- St. Joseph's Technology -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🎓</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">St. Joseph's Technology</h3>
+                        <p class="website-subtitle">College Website & Department Portal</p>
+                        <p class="website-description">
+                            College website created in 2013 that is still actively used today. Includes main college portal and mechanical engineering department section with ongoing content updates.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Student information system</li>
+                            <li>Faculty directory</li>
+                            <li>Course catalog</li>
+                            <li>News and announcements</li>
+                            <li>Department-specific sections</li>
+                            <li>Academic calendar</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">2013</div>
+                                <div class="stat-label">Year Built</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">12+ Years</div>
+                                <div class="stat-label">Still Active</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="https://stjosephstechnology.ac.in/home/" target="_blank" class="btn btn-primary">Main Site</a>
+                            <a href="https://stjosephstechnology.ac.in/web/mech/index.php" target="_blank" class="btn btn-secondary">Mech Dept</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poppy's Hotels -->
+                <div class="website-card">
+                    <div class="website-image">
+                        <span>🏨</span>
+                    </div>
+                    <div class="website-content">
+                        <h3 class="website-title">Poppy's Hotels</h3>
+                        <p class="website-subtitle">Hotel Booking & Management</p>
+                        <p class="website-description">
+                            Comprehensive hotel booking and management website featuring room reservations, availability checking, guest management, and administrative dashboard.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AJAX</span>
+                        </div>
+                        <ul class="website-features">
+                            <li>Online room booking system</li>
+                            <li>Real-time availability checker</li>
+                            <li>Guest management portal</li>
+                            <li>Payment processing</li>
+                            <li>Administrative dashboard</li>
+                            <li>Booking confirmation system</li>
+                        </ul>
+                        <div class="website-stats">
+                            <div class="stat">
+                                <div class="stat-value">Hotel</div>
+                                <div class="stat-label">Industry</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Full Stack</div>
+                                <div class="stat-label">Solution</div>
+                            </div>
+                        </div>
+                        <div class="website-actions">
+                            <a href="https://poppyshotels.com/" target="_blank" class="btn btn-primary">View Live Site</a>
+                            <a href="#" class="btn btn-secondary">Features</a>
                         </div>
                     </div>
                 </div>
