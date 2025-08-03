@@ -18,9 +18,8 @@ I'm an AI Product Manager with 10+ years of experience delivering data-driven so
 - **Product Manager, EdTech**
 
 ### Education
-- **Doctorate in Management Psychology** (IIM Bangalore)
-- **M.Sc. Counselling Psychology**
-- **MBA Business Analytics**
+- **Doctorate in Management Psychology** 
+- **Doctorate in Artifical Intelligence (AI)**
 
 ### Author
 - **"The Invisible Engine: How Systems, Not Willpower, Shape Who We Become"**
@@ -35,28 +34,3 @@ I'm an AI Product Manager with 10+ years of experience delivering data-driven so
 
 Feel free to reach out for consulting, speaking, or collaboration opportunities!
 
-## Technology Stack
-
-- **Framework**: Next.js 15.2.4
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI
-- **Icons**: Lucide React
-- **Deployment**: Vercel
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Build and Deploy
-
-- **Build**: `npm run build`
-- **Start**: `npm start`
-- **Lint**: `npm run lint`
-
----
-
-*Built with modern web technologies and designed for optimal user experience across all devices.*
